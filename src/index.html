@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo app</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class=" *:selection:bg-green-400 dark:bg-slate-800 m-0 p-0 bg-gray-200 text-white *:overflow-x-hidden">
+    <div class="container h-[80vh] w-[100vw] overflow-hidden">
+        <form class="h-1/2 w-full p-4 relative" name="myform" onsubmit="return submits()">
+            <div
+                class="h-10 w-[100%] text-nowrap rounded-lg p-2 flex justify-center items-center bg-white sm:w-1/2 text-black text-2xl">
+                Insert data</div><br>
+            <label class="dark:text-gray-50 pt-2 pb-2 text-black">Enter the ID number:</label><br class="sm:hidden">
+            <input class="userInput in-range:shadow-2xl top-5 h-12 w-full bg-white outline-none text-black rounded-lg p-2"
+                type="text" max="20" name="userInput"><br>
+            <label class="dark:text-gray-50 pt-2 pb-2 text-black">Enter name:</label><br>
+            <input class="userInput  top-7 h-12 w-full bg-white outline-none text-black rounded-lg p-2" type="text"
+                name="userInput"><br>
+            <label class="dark:text-gray-50 pt-2 pb-2 text-black">Enter your massage:</label><br>
+            <textarea class="userInput  top-9 h-36 w-full bg-white outline-none text-black rounded-lg p-2" type="text"
+                name="userInput"></textarea><br>
+            <button type="submit" name="userSubmit" value="search now" onclick="submits()" class="h-10 w-36 rounded-lg pt-1 pb-10 active:bg-gray-300 hover:bg-gray-200 bg-white text-black text-2xl relative top-10 duration-100 ease-in-out"
+                type="submit">search now</button>
+        </form>
+
+    </div>
+    <div class="displayLine h-20 w-[100%] border-t-4 border-b-4 border-black flex justify-center items-center">
+        <h1 class="text-3xl font-arial animate-bounce duration-150">Your Cards.!</h1>
+    </div>
+    <div class="container sm:gap-2 sm:flex w-full p-4 relative">
+        <div class="card mt-2 bg-amber-300 h-56 w-full rounded-lg relative overflow-hidden">
+            <div class="card-header w-full h-10 gird place-items-center bg-white text-black text-2xl">
+                <h1 class="text-2xl absolute left-2">ID:<span>121</span></h1>
+            </div>
+            <div class="card-body h-5 pl-2 w-full bg-black text-white text-md flex items-center">
+                <h1 class="text-md font-mono">Name: <span>muhammad sadoon</span></h1>
+            </div>
+            <div class="card-body pl-2 h-24 w-full bg-white text-gray-800 text-md ">
+                <p class="text-sm">massage: <span></span></p>
+            </div>
+            <button class="absolute text-black border flex justify-center items-center h-10 rounded-lg left-2 w-20 hover:bg-red-400 text-lg bottom-2 active:bg-red-500 hover:text-white duration-100 linear" >delete</button>
+        </div>
+        <div class="card mt-2 bg-amber-300 h-56 w-full rounded-lg relative overflow-hidden">
+            <div class="card-header w-full h-10 gird place-items-center bg-white text-black text-2xl">
+                <h1 class="text-2xl absolute left-2">ID:<span>121</span></h1>
+            </div>
+            <div class="card-body h-5 pl-2 w-full bg-black text-white text-md flex items-center">
+                <h1 class="text-md font-mono">Name: <span>muhammad sadoon</span></h1>
+            </div>
+            <div class="card-body pl-2 h-24 w-full bg-white text-gray-800 text-md ">
+                <p class="text-sm">massage: <span></span></p>
+            </div>
+            <button class="absolute text-black border flex justify-center items-center h-10 rounded-lg left-2 w-20 hover:bg-red-600 text-lg bottom-2 active:bg-red-800 hover:text-white duration-100 linear" >delete</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        function submits() {
+            return false;
+        }
+    </script>
+</body>
+
+</html>
